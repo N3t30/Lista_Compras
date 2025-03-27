@@ -3,7 +3,7 @@
  * 1) Crie um vetor para receber até 20 itens 
  * 2) solicite o nome de um item para comprar no mercado 
  * 3) verifique se o item já está na lista, se já estiver rejeite
- * 4) senão insira o item na lista ordem 
+ * 4) senão insira o item da lista na ordem 
  * 5) Exiba a lista ordenada 
  * 6) Depois de 10 itens digitados, a cada novo item pergunte se deseja acresentar
  * um novo item, se sim continue rodando o programa
@@ -11,6 +11,7 @@
  */
 
  import java.util.Scanner;
+ import java.util.Arrays;
 
  public class ExecItensMercado {
      public static void main(String[] args) {
@@ -40,6 +41,14 @@
              if (!jaExiste) {
                  itens[count] = entrada;
                  count++;
+
+                 Arrays.sort(itens , 0, count);
+                 
+                 System.out.println("\nlista atual");
+                 for (int i = 0; i < count; i++){
+                    System.out.println((i + 1) + ". " + itens[i]);
+                 }
+                 System.out.println();
              }
          }
          
