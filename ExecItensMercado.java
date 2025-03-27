@@ -15,6 +15,7 @@
 
  public class ExecItensMercado {
      public static void main(String[] args) {
+        // 1. criando o vetor para receber 20 itens 
          Scanner sc = new Scanner(System.in);
          String[] itens = new String[20];
          int count = 0;
@@ -43,7 +44,7 @@
                  count++;
 
                  Arrays.sort(itens , 0, count);
-                 
+
                  System.out.println("\nlista atual");
                  for (int i = 0; i < count; i++){
                     System.out.println((i + 1) + ". " + itens[i]);

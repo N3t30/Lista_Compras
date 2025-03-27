@@ -1,0 +1,27 @@
+# Como Contribuir
+
+Obrigado por querer contribuir! Siga estes passos:
+
+1. **Faça um Fork** do repositório
+2. **Clone** seu fork localmente:
+   ```bash
+   git clone https://github.com/seu-usuario/repositorio.git
+   ```
+3. Crie uma **branch** para sua feature:
+   ```bash
+   git checkout -b minha-feature
+   ```
+4. Faça suas alterações e **commit**:
+   ```bash
+   git commit -m "Descrição clara das mudanças"
+   ```
+5. **Envie** para seu fork:
+   ```bash
+   git push origin minha-feature
+   ```
+6. Abra um **Pull Request** no repositório original
+
+**Dicas**:
+- Mantenham suas branches atualizadas com `git pull origin main`
+- Escreva mensagens de commit claras
+- Documente suas alterações
