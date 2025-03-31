@@ -22,7 +22,7 @@
          
          System.out.println("Digite os itens:");
          
-         while (count < 3) {
+         while (count < 20) {
              System.out.print("Item " + (count + 1) + ": ");
              String entrada = sc.nextLine();
              
@@ -42,7 +42,8 @@
              if (!jaExiste) {
                  itens[count] = entrada;
                  count++;
-
+                 
+                 // Ordena somente o que está na lista 
                  Arrays.sort(itens , 0, count);
 
                  System.out.println("\nlista atual");
@@ -50,6 +51,14 @@
                     System.out.println((i + 1) + ". " + itens[i]);
                  }
                  System.out.println();
+
+                 if (count >= 10){
+                    System.out.println(" Deseja adicionar mais um item? (s/n): ");
+                    String resposta = sc.nextLine();
+                    if (!resposta.equals("s")) {
+                        break;
+                    }
+                 }
              }
          }
          
