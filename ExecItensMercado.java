@@ -15,7 +15,7 @@
 
  public class ExecItensMercado {
      public static void main(String[] args) {
-        // 1. criando o vetor para receber 20 itens 
+         /* Criando vetor para recebr 20 itens */
          Scanner sc = new Scanner(System.in);
          String[] itens = new String[20];
          int count = 0;
@@ -25,11 +25,11 @@
          while (count < 20) {
              System.out.print("Item " + (count + 1) + ": ");
              String entrada = sc.nextLine();
-             
+             /*Se digitar fim, encerra antes */
              if (entrada.equalsIgnoreCase("fim")) {
                  break;
              }
-             
+              /* Verificando se o item já existe */
              boolean jaExiste = false;
              for (int i = 0; i < count; i++) {
                  if (itens[i].equalsIgnoreCase(entrada)) {
@@ -43,15 +43,16 @@
                  itens[count] = entrada;
                  count++;
                  
-                 // Ordena somente o que está na lista 
+                 /* Ordena a lista  */
                  Arrays.sort(itens , 0, count);
-
+                 /* Exibe a lista ordenada */
                  System.out.println("\nlista atual");
                  for (int i = 0; i < count; i++){
                     System.out.println((i + 1) + ". " + itens[i]);
                  }
                  System.out.println();
 
+                 /* Após 10 itens, pergunta se deseja continuar */
                  if (count >= 10){
                     System.out.println(" Deseja adicionar mais um item? (s/n): ");
                     String resposta = sc.nextLine();
